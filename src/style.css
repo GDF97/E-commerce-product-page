@@ -52,11 +52,32 @@ a {
   display: flex;
   align-items: center;
   position: relative;
+  gap: 3rem;
 }
 
 .header__menu {
   display: flex;
   align-items: center;
+  gap: 3rem;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  left: 0;
+  bottom: -40px;
+  background-color: var(--color-orange);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover:after {
+  width: 100%;
 }
 
 .btn-mobile-close {
@@ -65,10 +86,6 @@ a {
 
 .btn-mobile {
   display: none;
-}
-
-.header__menu > li {
-  padding-left: 3rem;
 }
 
 .header__menu > li > a {
@@ -573,5 +590,17 @@ a {
 
   .desc {
     width: fit-content;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+  }
+
+  .quantity-button-wrapper {
+    width: 100%;
+  }
+
+  .add-to-cart {
+    width: 100%;
   }
 }
